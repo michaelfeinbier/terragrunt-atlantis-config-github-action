@@ -2,7 +2,7 @@
 
 # Install the tool
 export GO111MODULE=on
-go get "github.com/transcend-io/terragrunt-atlantis-config@$1"
+go install "github.com/transcend-io/terragrunt-atlantis-config@$1"
 
 # Generate what the config should look like
 shift
