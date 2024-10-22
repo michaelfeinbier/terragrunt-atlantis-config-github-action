@@ -30,13 +30,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Validate atlantis.yaml
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Ensure atlantis.yaml is up to date using terragrunt-atlantis-config
         id: atlantis_validator
-        uses: transcend-io/terragrunt-atlantis-config-github-action@v0.0.3
+        uses: transcend-io/terragrunt-atlantis-config-github-action@v0.0.5
         with:
           version: v0.5.0
-          extra_args: '--autoplan --parallel=false
+          extra_args: '--autoplan --parallel=false'
 ```
 
 If you want to save money on billable minutes, you could update to run on pull requests instead of each push
